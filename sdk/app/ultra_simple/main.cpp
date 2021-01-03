@@ -26,6 +26,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <cmath>
 
 #include "rplidar.h" //RPLIDAR standard sdk, all-in-one header
 
@@ -219,7 +220,7 @@ int main(int argc, const char* argv[])
 	// start scan...
 	drv->startScan(0, 1);
 
-	//ÃÖÁ¾ data Ãâ·Â
+	//ï¿½ï¿½ï¿½ï¿½ data ï¿½ï¿½ï¿½
 	// fetech result and print it out...
 	while (1) 
 	{
@@ -260,15 +261,15 @@ on_finished:
 
 float polar_to_cartesian_x(float pi, float theta, float dist)
 {
-	return (dist * cos(theta) * cos(pi));
+	return (dist * std::cos(theta) * std::cos(pi));
 }
 
 float polar_to_cartesian_y(float pi, float theta, float dist)
 {
-	return (dist * sin(theta));
+	return (dist * std::sin(theta));
 }
 
 float polar_to_cartesian_z(float pi, float theta, float dist)
 {
-	return (dist * cos(theta) * sin(pi));
+	return (dist * std::cos(theta) * std::sin(pi));
 }
