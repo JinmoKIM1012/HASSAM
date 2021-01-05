@@ -175,7 +175,7 @@ public:
     ///
     /// \param rateInfo      The sample duration information returned from the RPLIDAR
     /// \param timeout       The operation timeout value (in millisecond) for the serial port communication
-    DEPRECATED(virtual u_result getSampleDuration_uS(rplidar_response_sample_rate_t & rateInfo, _u32 timeout = DEFAULT_TIMEOUT)) = 0;
+    virtual u_result getSampleDuration_uS(rplidar_response_sample_rate_t & rateInfo, _u32 timeout = DEFAULT_TIMEOUT) = 0;
     
     /// Set the RPLIDAR's motor pwm when using accessory board, currently valid for A2 and A3 only.
     /// 
@@ -217,7 +217,7 @@ public:
     /// \param count         The number of sample nodes inside the given buffer
     /// \param frequency     The scanning frequency (in HZ) calcuated by the interface.
     /// \param is4kmode      Return whether the RPLIDAR is working on 4k sample rate mode.
-    DEPRECATED(virtual u_result getFrequency(bool inExpressMode, size_t count, float & frequency, bool & is4kmode)) = 0;
+    virtual u_result getFrequency(bool inExpressMode, size_t count, float & frequency, bool & is4kmode) = 0;
 
     /// Calculate RPLIDAR's current scanning frequency from the given scan data
     /// Please refer to the application note doc for details
@@ -240,7 +240,7 @@ public:
     ///
     /// \param support       Return the result.
     /// \param timeout       The operation timeout value (in millisecond) for the serial port communication.
-    DEPRECATED(virtual u_result checkExpressScanSupported(bool & support, _u32 timeout = DEFAULT_TIMEOUT)) = 0;
+    virtual u_result checkExpressScanSupported(bool & support, _u32 timeout = DEFAULT_TIMEOUT) = 0;
 
     /// Ask the RPLIDAR core system to stop the current scan operation and enter idle state. The background thread will be terminated
     ///
@@ -266,7 +266,7 @@ public:
     /// The interface will return RESULT_OPERATION_TIMEOUT to indicate that no complete 360-degrees' scan can be retrieved withing the given timeout duration. 
     ///
     /// \The caller application can set the timeout value to Zero(0) to make this interface always returns immediately to achieve non-block operation.
-    DEPRECATED(virtual u_result grabScanData(rplidar_response_measurement_node_t * nodebuffer, size_t & count, _u32 timeout = DEFAULT_TIMEOUT)) = 0;
+    virtual u_result grabScanData(rplidar_response_measurement_node_t * nodebuffer, size_t & count, _u32 timeout = DEFAULT_TIMEOUT) = 0;
 
     /// Wait and grab a complete 0-360 degree scan data previously received. 
     /// The grabbed scan data returned by this interface always has the following charactistics:
@@ -294,7 +294,7 @@ public:
     /// \param count          The caller must initialize this parameter to set the max data count of the provided buffer (in unit of rplidar_response_measurement_node_t).
     ///                       Once the interface returns, this parameter will store the actual received data count.
     /// The interface will return RESULT_OPERATION_FAIL when all the scan data is invalid. 
-    DEPRECATED(virtual u_result ascendScanData(rplidar_response_measurement_node_t * nodebuffer, size_t count)) = 0;
+    virtual u_result ascendScanData(rplidar_response_measurement_node_t * nodebuffer, size_t count) = 0;
 
     /// Ascending the scan data according to the angle value in the scan.
     ///
@@ -312,7 +312,7 @@ public:
     /// \param count          Once the interface returns, this parameter will store the actual received data count.
     ///
     /// The interface will return RESULT_OPERATION_TIMEOUT to indicate that not even a single node can be retrieved since last call. 
-    DEPRECATED(virtual u_result getScanDataWithInterval(rplidar_response_measurement_node_t * nodebuffer, size_t & count)) = 0;
+    virtual u_result getScanDataWithInterval(rplidar_response_measurement_node_t * nodebuffer, size_t & count) = 0;
 
     /// Return received scan points even if it's not complete scan.
     ///

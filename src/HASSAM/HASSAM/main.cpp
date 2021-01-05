@@ -14,7 +14,7 @@ int main(int argc, const char* argv[])
 		H_rplidar(argc, argv, INITIAL + i);
 	}
 
-	H_dynamixel(0);
+	H_dynamixel(INITIAL);
 
 	return 0;
 }

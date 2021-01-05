@@ -135,7 +135,7 @@ int H_dynamixel(int change)
 	}
 	
 	//dynamixel 각도 바꾸는 함수
-	dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, DXL_ID, ADDR_MX_GOAL_POSITION, INITIAL + change, &dxl_error);
+	dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, DXL_ID, ADDR_MX_GOAL_POSITION, change, &dxl_error);
 	if (dxl_comm_result != COMM_SUCCESS)
 	{
 		printf("%s\n", packetHandler->getTxRxResult(dxl_comm_result));
