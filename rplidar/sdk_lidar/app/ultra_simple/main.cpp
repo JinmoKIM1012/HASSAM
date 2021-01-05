@@ -41,7 +41,7 @@
 #include <unistd.h>
 static inline void delay(_word_size_t ms)
 {
-	while (ms >= 1000) 
+	while (ms >= 1000)
 	{
 		usleep(1000 * 1000);
 		ms -= 1000;
@@ -65,11 +65,11 @@ bool checkRPLIDARHealth(RPlidarDriver* drv)
 
 	op_result = drv->getHealth(healthinfo);
 
-	if (IS_OK(op_result)) 
+	if (IS_OK(op_result))
 	{ // the macro IS_OK is the preperred way to judge whether the operation is succeed.
 		printf("RPLidar health status : %d\n", healthinfo.status);
 
-		if (healthinfo.status == RPLIDAR_STATUS_ERROR) 
+		if (healthinfo.status == RPLIDAR_STATUS_ERROR)
 		{
 			fprintf(stderr, "Error, rplidar internal error detected. Please reboot the device to retry.\n");
 			// enable the following code if you want rplidar to be reboot by software
@@ -81,7 +81,7 @@ bool checkRPLIDARHealth(RPlidarDriver* drv)
 			return true;
 	}
 
-	else 
+	else
 	{
 		fprintf(stderr, "Error, cannot retrieve the lidar health code: %x\n", op_result);
 		return false;
@@ -96,7 +96,7 @@ void ctrlc(int)
 	ctrl_c_pressed = true;
 }
 
-int main(int argc, const char* argv[]) 
+int main(int argc, const char* argv[])
 {
 	const char* opt_com_path = NULL;
 	_u32         baudrateArray[2] = { 115200, 256000 };
@@ -109,7 +109,7 @@ int main(int argc, const char* argv[])
 		"Version: " RPLIDAR_SDK_VERSION "\n");
 
 	// read serial port from the command line...
-	if (argc > 1) 
+	if (argc > 1)
 		opt_com_path = argv[1]; // or set to a fixed value: e.g. "com3" 
 
 	// read baud rate from the command line if specified...
@@ -119,7 +119,7 @@ int main(int argc, const char* argv[])
 		useArgcBaudrate = true;
 	}
 
-	if (!opt_com_path) 
+	if (!opt_com_path)
 	{
 #ifdef _WIN32
 		// use default com port
@@ -134,7 +134,7 @@ int main(int argc, const char* argv[])
 	// create the driver instance
 	RPlidarDriver* drv = RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT);
 
-	if (!drv) 
+	if (!drv)
 	{
 		fprintf(stderr, "insufficent memory, exit\n");
 		exit(-2);
@@ -188,8 +188,8 @@ int main(int argc, const char* argv[])
 			}
 		}
 	}
-	
-	if (!connectSuccess) 
+
+	if (!connectSuccess)
 	{
 		fprintf(stderr, "Error, cannot bind to the specified serial port %s.\n", opt_com_path);
 		goto on_finished;
@@ -198,7 +198,7 @@ int main(int argc, const char* argv[])
 	// print out the device serial number, firmware and hardware version number..
 	printf("RPLIDAR S/N: ");
 
-	for (int pos = 0; pos < 16; ++pos) 
+	for (int pos = 0; pos < 16; ++pos)
 		printf("%02X", devinfo.serialnum[pos]);
 
 	printf("\n"
@@ -222,18 +222,18 @@ int main(int argc, const char* argv[])
 
 	//���� data ���
 	// fetech result and print it out...
-	while (1) 
+	while (1)
 	{
 		rplidar_response_measurement_node_hq_t nodes[8192];
 		size_t   count = _countof(nodes);
 
 		op_result = drv->grabScanDataHq(nodes, count);
 
-		if (IS_OK(op_result)) 
+		if (IS_OK(op_result))
 		{
 			drv->ascendScanData(nodes, count);
-			
-			for (int pos = 0; pos < (int)count; ++pos) 
+
+			for (int pos = 0; pos < (int)count; ++pos)
 			{
 				float theta = (nodes[pos].angle_z_q14 * 90.f / (1 << 14)), dist = nodes[pos].dist_mm_q2 / 4.0f;
 				printf("%s theta: %03.2f Dist: %08.2f Q: %d \n",
@@ -244,7 +244,7 @@ int main(int argc, const char* argv[])
 				if (nodes[pos].quality)
 					printf("x : %03.2f, y : %03.2f, z : %03.2f\n", polar_to_cartesian_x(0, theta, dist), polar_to_cartesian_y(0, theta, dist), polar_to_cartesian_z(0, theta, dist));
 			}
-			
+
 			if (ctrl_c_pressed)
 				break;
 		}
