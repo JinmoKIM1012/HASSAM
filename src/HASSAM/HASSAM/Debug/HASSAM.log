@@ -1,1 +1,6 @@
-﻿  HASSAM.vcxproj -> C:\github\HASSAM\src\HASSAM\Debug\HASSAM.exe
+﻿  main.cpp
+C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
+C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
+C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+  HASSAM.vcxproj -> C:\github\HASSAM\src\HASSAM\Debug\HASSAM.exe
