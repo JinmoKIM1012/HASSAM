@@ -148,6 +148,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="H_rplidar.cpp" />
+    <ClCompile Include="H_dynamixel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H_dynamixel.h" />
+    <ClInclude Include="H_rplidar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
