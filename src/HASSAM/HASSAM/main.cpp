@@ -14,7 +14,8 @@ int main(int argc, const char* argv[])
 	{
 		if (H_dynamixel(INITIAL + i))
 			exit(0);
-		H_rplidar(argc, argv, INITIAL + i, fp);
+		float phi = (((INITIAL + i) - 512.0) * 150.0) / 512.0;
+		H_rplidar(argc, argv, phi, fp);
 	}
 
 	H_dynamixel(INITIAL);

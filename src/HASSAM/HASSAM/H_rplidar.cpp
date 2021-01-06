@@ -64,7 +64,7 @@ void ctrlc(int)
 	ctrl_c_pressed = true;
 }
 
-int H_rplidar(int argc, const char* argv[], int pi, FILE* fp)
+int H_rplidar(int argc, const char* argv[], int phi, FILE* fp)
 {
 	const char* opt_com_path = NULL;
 	_u32         baudrateArray[2] = { 115200, 256000 };
@@ -218,7 +218,7 @@ int H_rplidar(int argc, const char* argv[], int pi, FILE* fp)
 					flag++;
 
 				if (flag && nodes[pos].quality)
-					fprintf(fp, "%03.2f %03.2f %03.2f\n", polar_to_cartesian_x(pi, theta, dist), polar_to_cartesian_y(pi, theta, dist), polar_to_cartesian_z(pi, theta, dist));
+					fprintf(fp, "%03.2f %03.2f %03.2f\n", polar_to_cartesian_x(phi, theta, dist), polar_to_cartesian_y(phi, theta, dist), polar_to_cartesian_z(phi, theta, dist));
 				theta_prev = theta;
 			}
 
@@ -239,17 +239,17 @@ on_finished:
 	return 0;
 }
 
-float polar_to_cartesian_x(float pi, float theta, float dist)
+float polar_to_cartesian_x(float phi, float theta, float dist)
 {
 	return (dist * std::sin(theta)); 
 }
 
-float polar_to_cartesian_y(float pi, float theta, float dist)
+float polar_to_cartesian_y(float phi, float theta, float dist)
 {
-	return (dist * std::cos(theta) * std::cos(pi));
+	return (dist * std::cos(theta) * std::cos(phi));
 }
 
-float polar_to_cartesian_z(float pi, float theta, float dist)
+float polar_to_cartesian_z(float phi, float theta, float dist)
 {
-	return (dist * std::cos(theta) * std::sin(pi));
+	return (dist * std::cos(theta) * std::sin(phi));
 }
