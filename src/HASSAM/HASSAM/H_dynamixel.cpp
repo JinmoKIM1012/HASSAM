@@ -135,7 +135,7 @@ int H_dynamixel(int change)
 	}
 	
 	//dynamixel 각도 바꾸는 함수
-	dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, DXL_ID, ADDR_MX_GOAL_POSITION, INITIAL + change, &dxl_error);
+	dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, DXL_ID, ADDR_MX_GOAL_POSITION, change, &dxl_error);
 	if (dxl_comm_result != COMM_SUCCESS)
 	{
 		printf("%s\n", packetHandler->getTxRxResult(dxl_comm_result));
@@ -145,7 +145,7 @@ int H_dynamixel(int change)
 		printf("%s\n", packetHandler->getRxPacketError(dxl_error));
 	}
 	
-	/*
+	///*
 	do
 	{
 		// Read present position
@@ -159,10 +159,10 @@ int H_dynamixel(int change)
 			printf("%s\n", packetHandler->getRxPacketError(dxl_error));
 		}
 			
-		printf("[ID:%03d] GoalPos:%03d  PresPos:%03d\n", DXL_ID, dxl_goal_position[index], dxl_present_position);
+		printf("[ID:%03d] GoalPos:%03d  PresPos:%03d\n", DXL_ID, change, dxl_present_position);
 
-	} while ((abs(dxl_goal_position[index] - dxl_present_position) > DXL_MOVING_STATUS_THRESHOLD));
-
+	} while ((abs(change - dxl_present_position) > DXL_MOVING_STATUS_THRESHOLD));
+	/*
 	// Change goal position
 	if (index == 0)
 	{
