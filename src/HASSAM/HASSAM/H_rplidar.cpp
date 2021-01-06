@@ -64,7 +64,7 @@ void ctrlc(int)
 	ctrl_c_pressed = true;
 }
 
-int H_rplidar(int argc, const char* argv[], int pi)
+int H_rplidar(int argc, const char* argv[], int pi, FILE* fp)
 {
 	const char* opt_com_path = NULL;
 	_u32         baudrateArray[2] = { 115200, 256000 };
@@ -76,8 +76,6 @@ int H_rplidar(int argc, const char* argv[], int pi)
 	int flag = 0;
 
 	float theta_prev = 0;
-
-	FILE* fp = fopen("HASSAM_output.txt", "a");
 
 	printf("Ultra simple LIDAR data grabber for RPLIDAR.\n"
 		"Version: " RPLIDAR_SDK_VERSION "\n");
@@ -237,8 +235,6 @@ int H_rplidar(int argc, const char* argv[], int pi)
 on_finished:
 	RPlidarDriver::DisposeDriver(drv);
 	drv = NULL;
-
-	fclose(fp);
 
 	return 0;
 }

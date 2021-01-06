@@ -1,4 +1,169 @@
-﻿  main.cpp
+﻿  H_dynamixel.cpp
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251: 'dynamixel::GroupBulkRead::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message : 'std::vector<uint8_t,std::allocator<_Ty>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251: 'dynamixel::GroupBulkRead::address_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251:             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44,48): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message : 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251: 'dynamixel::GroupBulkRead::length_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251:             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(45,47): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message : 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251: 'dynamixel::GroupBulkRead::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46,45): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251: 'dynamixel::GroupBulkRead::error_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(47,46): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(43,43): warning C4251: 'dynamixel::GroupBulkWrite::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>'에서는 class 'dynamixel::GroupBulkWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(43,43): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(43,43): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(43,43): warning C4251:             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(43,43): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message : 'std::vector<uint8_t,std::allocator<_Ty>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251: 'dynamixel::GroupBulkWrite::address_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251:             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(44,48): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message : 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251: 'dynamixel::GroupBulkWrite::length_list_': class 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251:             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(45,47): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message : 'std::map<uint8_t,uint16_t,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :             _Ty=uint16_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(44): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251: 'dynamixel::GroupBulkWrite::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupBulkWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_write.h(46,45): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(43,43): warning C4251: 'dynamixel::GroupSyncRead::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>'에서는 class 'dynamixel::GroupSyncRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(43,43): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(43,43): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(43,43): warning C4251:             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(43,43): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message : 'std::vector<uint8_t,std::allocator<_Ty>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251: 'dynamixel::GroupSyncRead::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupSyncRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(44,45): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251: 'dynamixel::GroupSyncRead::error_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupSyncRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_read.h(45,46): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(43,43): warning C4251: 'dynamixel::GroupSyncWrite::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>'에서는 class 'dynamixel::GroupSyncWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(43,43): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(43,43): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(43,43): warning C4251:             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(43,43): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message : 'std::vector<uint8_t,std::allocator<_Ty>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :             _Ty=uint8_t
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\packet_handler.h(205): message :         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251: 'dynamixel::GroupSyncWrite::data_list_': class 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'에서는 class 'dynamixel::GroupSyncWrite'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251:         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251:         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251:             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251:             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_sync_write.h(44,45): warning C4251:         ]
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message : 'std::map<uint8_t,uint8_t *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' 선언을 참조하십시오.
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         with
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         [
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Kty=uint8_t,
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :             _Ty=uint8_t *
+C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): message :         ]
+C:\github\HASSAM\src\HASSAM\HASSAM\H_dynamixel.cpp(105,1): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+C:\github\HASSAM\src\HASSAM\HASSAM\H_dynamixel.cpp(30): message : 'getch' 선언을 참조하십시오.
+C:\github\HASSAM\src\HASSAM\HASSAM\H_dynamixel.cpp(118,1): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  main.cpp
+C:\github\HASSAM\src\HASSAM\HASSAM\H_dynamixel.cpp(30): message : 'getch' 선언을 참조하십시오.
 C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251: 'dynamixel::GroupBulkRead::id_list_': class 'std::vector<uint8_t,std::allocator<_Ty>>'에서는 class 'dynamixel::GroupBulkRead'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
 C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:         with
 C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(43,43): warning C4251:         [
@@ -163,4 +328,7 @@ C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): warnin
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
+C:\github\HASSAM\src\HASSAM\HASSAM\main.cpp(10,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  코드를 생성하고 있습니다...
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : 'fopen' 선언을 참조하십시오.
   HASSAM.vcxproj -> C:\github\HASSAM\src\HASSAM\Debug\HASSAM.exe

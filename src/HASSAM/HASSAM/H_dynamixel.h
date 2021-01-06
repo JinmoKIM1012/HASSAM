@@ -31,7 +31,7 @@
 #define TORQUE_DISABLE                  0                   // Value for disabling the torque
 #define DXL_MINIMUM_POSITION_VALUE      100                 // Dynamixel will rotate between this value
 #define DXL_MAXIMUM_POSITION_VALUE      1023                // and this value (note that the Dynamixel would not move when the position value is out of movable range. Check e-manual about the range of the Dynamixel you use.)
-#define DXL_MOVING_STATUS_THRESHOLD     10                  // Dynamixel moving status threshold
+#define DXL_MOVING_STATUS_THRESHOLD     5                  // Dynamixel moving status threshold
 
 #define ESC_ASCII_VALUE                 0x1b
 
