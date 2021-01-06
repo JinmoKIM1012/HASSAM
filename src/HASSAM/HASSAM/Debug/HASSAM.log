@@ -162,16 +162,5 @@ C:\github\HASSAM\dynamixel\c++\include\dynamixel_sdk\group_bulk_read.h(46): mess
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
-  H_rplidar.cpp
 C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
-C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
-C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_protocol.h(59,16): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
-C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): warning C4200: 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.
-C:\github\HASSAM\rplidar\sdk_lidar\sdk\include\rplidar_cmd.h(260,20): message : 이 멤버는 기본값으로 설정된 생성자 또는 복사/이동 대입 연산자에서 무시됩니다.
-C:\github\HASSAM\src\HASSAM\HASSAM\H_rplidar.cpp(220,65): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\github\HASSAM\src\HASSAM\HASSAM\H_rplidar.cpp(220,104): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\github\HASSAM\src\HASSAM\HASSAM\H_rplidar.cpp(220,143): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\github\HASSAM\src\HASSAM\HASSAM\H_rplidar.cpp(78,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  코드를 생성하고 있습니다...
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message : 'fopen' 선언을 참조하십시오.
   HASSAM.vcxproj -> C:\github\HASSAM\src\HASSAM\Debug\HASSAM.exe

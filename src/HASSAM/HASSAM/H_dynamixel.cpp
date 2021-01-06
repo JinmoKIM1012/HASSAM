@@ -145,7 +145,7 @@ int H_dynamixel(int change)
 		printf("%s\n", packetHandler->getRxPacketError(dxl_error));
 	}
 	
-	/*
+	///*
 	do
 	{
 		// Read present position
@@ -159,10 +159,10 @@ int H_dynamixel(int change)
 			printf("%s\n", packetHandler->getRxPacketError(dxl_error));
 		}
 			
-		printf("[ID:%03d] GoalPos:%03d  PresPos:%03d\n", DXL_ID, dxl_goal_position[index], dxl_present_position);
+		printf("[ID:%03d] GoalPos:%03d  PresPos:%03d\n", DXL_ID, change, dxl_present_position);
 
-	} while ((abs(dxl_goal_position[index] - dxl_present_position) > DXL_MOVING_STATUS_THRESHOLD));
-
+	} while ((abs(change - dxl_present_position) > DXL_MOVING_STATUS_THRESHOLD));
+	/*
 	// Change goal position
 	if (index == 0)
 	{

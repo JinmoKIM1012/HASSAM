@@ -75,6 +75,8 @@ int H_rplidar(int argc, const char* argv[], int pi)
 
 	int flag = 0;
 
+	float theta_prev = 0;
+
 	FILE* fp = fopen("HASSAM_output.txt", "a");
 
 	printf("Ultra simple LIDAR data grabber for RPLIDAR.\n"
@@ -192,6 +194,7 @@ int H_rplidar(int argc, const char* argv[], int pi)
 	// start scan...
 	drv->startScan(0, 1);
 
+
 	//���� data ���
 	// fetech result and print it out...
 	while (flag < 3)
@@ -213,18 +216,19 @@ int H_rplidar(int argc, const char* argv[], int pi)
 					theta, dist,
 					nodes[pos].quality);
 
-				if (theta == 0)
+				if (theta - theta_prev < 0)
 					flag++;
 
 				if (flag && nodes[pos].quality)
 					fprintf(fp, "%03.2f %03.2f %03.2f\n", polar_to_cartesian_x(pi, theta, dist), polar_to_cartesian_y(pi, theta, dist), polar_to_cartesian_z(pi, theta, dist));
+				theta_prev = theta;
 			}
 
 			if (ctrl_c_pressed)
 				break;
 		}
 	}
-
+	flag = 0;
 	drv->stop();
 	drv->stopMotor();
 
@@ -241,12 +245,12 @@ on_finished:
 
 float polar_to_cartesian_x(float pi, float theta, float dist)
 {
-	return (dist * std::cos(theta) * std::cos(pi));
+	return (dist * std::sin(theta)); 
 }
 
 float polar_to_cartesian_y(float pi, float theta, float dist)
 {
-	return (dist * std::sin(theta));
+	return (dist * std::cos(theta) * std::cos(pi));
 }
 
 float polar_to_cartesian_z(float pi, float theta, float dist)
