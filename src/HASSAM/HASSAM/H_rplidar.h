@@ -28,6 +28,7 @@ static inline void delay(_word_size_t ms)
 }
 #endif
 
+#define PI 3.14159265358979
 
 using namespace rp::standalone::rplidar;
 

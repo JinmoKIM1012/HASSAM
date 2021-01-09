@@ -7,14 +7,15 @@
 
 int main(int argc, const char* argv[])
 {
-	FILE* fp = fopen("HASSAM_output.txt", "w");
+	int pres_pos;
+	FILE* fp = fopen("C:/github/HASSAM/src/HASSAM/HASSAM/HASSAM_output88.txt", "w");
 
 	H_dynamixel(INITIAL);
-	for (int i = 1; i <= MAX_CHANGE; i += 20)
+	for (int i = 1; i <= MAX_CHANGE; i += 4)
 	{
-		if (H_dynamixel(INITIAL + i))
+		if ((pres_pos = H_dynamixel(INITIAL + i)) == -1)
 			exit(0);
-		float phi = (((INITIAL + i) - 512.0) * 150.0) / 512.0;
+		float phi = (((pres_pos) - 500.0) * 150.0) / 512.0;
 		H_rplidar(argc, argv, phi, fp);
 	}
 

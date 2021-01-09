@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\github\HASSAM\hole_detection_2\build\CMakeFiles\d6a26ed96414035ba4415ad27b7530a1\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EE4A824F-D11F-30D6-948E-9EB8511CD1CD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

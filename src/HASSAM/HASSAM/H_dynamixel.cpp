@@ -188,5 +188,5 @@ int H_dynamixel(int change)
 	// Close port
 	portHandler->closePort();
 
-	return 0;
+	return (int)dxl_present_position;
 }
