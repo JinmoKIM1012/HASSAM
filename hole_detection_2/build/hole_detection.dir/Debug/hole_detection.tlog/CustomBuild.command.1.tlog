@@ -1,0 +1,10 @@
+^C:\GITHUB\HASSAM\HOLE_DETECTION_2\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/github/HASSAM/hole_detection_2 -BC:/github/HASSAM/hole_detection_2/build --check-stamp-file C:/github/HASSAM/hole_detection_2/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
