@@ -28,6 +28,7 @@ static inline void delay(_word_size_t ms)
 }
 #endif
 
+#define PI 3.14159265358979
 
 using namespace rp::standalone::rplidar;
 
@@ -37,4 +38,4 @@ float polar_to_cartesian_x(float pi, float theta, float dist);
 float polar_to_cartesian_y(float pi, float theta, float dist);
 float polar_to_cartesian_z(float pi, float theta, float dist);
 
-int H_rplidar(int argc, const char* argv[], int i);
+int H_rplidar(int argc, const char* argv[], int i, FILE* fp);

@@ -64,7 +64,7 @@ void ctrlc(int)
 	ctrl_c_pressed = true;
 }
 
-int H_rplidar(int argc, const char* argv[], int pi)
+int H_rplidar(int argc, const char* argv[], int phi, FILE* fp)
 {
 	const char* opt_com_path = NULL;
 	_u32         baudrateArray[2] = { 115200, 256000 };
@@ -76,8 +76,6 @@ int H_rplidar(int argc, const char* argv[], int pi)
 	int flag = 0;
 
 	float theta_prev = 0;
-
-	FILE* fp = fopen("HASSAM_output.txt", "a");
 
 	printf("Ultra simple LIDAR data grabber for RPLIDAR.\n"
 		"Version: " RPLIDAR_SDK_VERSION "\n");
@@ -197,7 +195,7 @@ int H_rplidar(int argc, const char* argv[], int pi)
 
 	//���� data ���
 	// fetech result and print it out...
-	while (flag < 3)
+	while (flag < 35)
 	{
 		rplidar_response_measurement_node_hq_t nodes[8192];
 		size_t   count = _countof(nodes);
@@ -219,9 +217,19 @@ int H_rplidar(int argc, const char* argv[], int pi)
 				if (theta - theta_prev < 0)
 					flag++;
 
-				if (flag && nodes[pos].quality)
-					fprintf(fp, "%03.2f %03.2f %03.2f\n", polar_to_cartesian_x(pi, theta, dist), polar_to_cartesian_y(pi, theta, dist), polar_to_cartesian_z(pi, theta, dist));
-				theta_prev = theta;
+				if (flag && nodes[pos].quality && dist < 600 && ((theta < 60) || (theta > 13)))
+				{
+					float theta_rad = theta * PI / 180;
+					float phi_rad = phi * PI / 180;
+					// r = 7.3cm = 73mm
+					float new_dist = sqrt(dist * dist + 4 * 73 * 73 * std::sin(phi_rad / 2) * std::sin(phi_rad / 2) - 2 * dist * 73 * std::sin(phi_rad));
+					float y = polar_to_cartesian_y(phi_rad, theta_rad, new_dist / 10);
+					float x = polar_to_cartesian_x(phi_rad, theta_rad, new_dist / 10);
+					if (y < 20 && 1 < y && x > 0)
+						//fprintf(fp, "%03.2f %03.2f\n", polar_to_cartesian_x(phi_rad, theta_rad, new_dist / 10), polar_to_cartesian_z(phi_rad, theta_rad, new_dist / 10));
+						fprintf(fp, "%03.2f %03.2f %03.2f\n", x, y, polar_to_cartesian_z(phi_rad, theta_rad, new_dist / 10));
+				}
+					theta_prev = theta;
 			}
 
 			if (ctrl_c_pressed)
@@ -238,22 +246,20 @@ on_finished:
 	RPlidarDriver::DisposeDriver(drv);
 	drv = NULL;
 
-	fclose(fp);
-
 	return 0;
 }
 
-float polar_to_cartesian_x(float pi, float theta, float dist)
+float polar_to_cartesian_x(float phi, float theta, float dist)
 {
-	return (dist * std::sin(theta)); 
+	return (dist * std::sin(theta));
 }
 
-float polar_to_cartesian_y(float pi, float theta, float dist)
+float polar_to_cartesian_y(float phi, float theta, float dist)
 {
-	return (dist * std::cos(theta) * std::cos(pi));
+	return (dist * std::cos(theta) * std::cos(phi));
 }
 
-float polar_to_cartesian_z(float pi, float theta, float dist)
+float polar_to_cartesian_z(float phi, float theta, float dist)
 {
-	return (dist * std::cos(theta) * std::sin(pi));
+	return (dist * std::cos(theta) * std::sin(phi));
 }
