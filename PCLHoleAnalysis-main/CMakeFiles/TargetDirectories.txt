@@ -1,0 +1,3 @@
+/mnt/c/github/HASSAM/PCLHoleAnalysis-main/CMakeFiles/rebuild_cache.dir
+/mnt/c/github/HASSAM/PCLHoleAnalysis-main/CMakeFiles/edit_cache.dir
+/mnt/c/github/HASSAM/PCLHoleAnalysis-main/CMakeFiles/pcl_hole_analysis.dir
